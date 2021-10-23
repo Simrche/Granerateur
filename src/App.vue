@@ -5,6 +5,7 @@
     <Menu v-if="isMenu" @choice='choice'></Menu>
     <Ville v-if="app === 'ville'"></Ville>
     <Pays v-if="app === 'pays'"></Pays>
+    <Prenom v-if="app === 'prenom'"></Prenom>
   </section>
 </template>
 
@@ -14,6 +15,7 @@ import Menu from './components/Menu.vue'
 import Ville from './components/Ville.vue'
 import Sidebar from './components/Sidebar.vue'
 import Pays from './components/Pays.vue'
+import Prenom from './components/Prenom.vue'
 
 export default {
   name: 'App',
@@ -22,6 +24,7 @@ export default {
     Ville,
     Sidebar,
     Pays,
+    Prenom,
   },
   data() {
       return {
