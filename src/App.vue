@@ -1,6 +1,6 @@
 <template>
   <h1 v-bind:class="{ h1App: isSidebar }">Granerateur.</h1>
-  <Sidebar v-if="isSidebar"></Sidebar>
+  <Sidebar v-if="isSidebar" @choice='choice' @menu="menu"></Sidebar>
   <section id="container" v-bind:class="{ containerMenu: isSidebar }">
     <Menu v-if="isMenu" @choice='choice'></Menu>
     <Ville v-if="app === 'ville'"></Ville>
@@ -48,6 +48,12 @@ export default {
       this.isMenu = false
       this.isSidebar = true
       this.app = payload
+    },
+
+    menu() {
+      this.isMenu = true
+      this.isSidebar = false
+      this.app = ""
     }
   }
 }
