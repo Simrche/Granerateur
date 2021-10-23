@@ -1,8 +1,10 @@
 <template>
-  <h1>Granerateur.</h1>
-  <section id="container">
-    <Menu v-if="isMenu"></Menu>
+  <h1 v-bind:class="{ h1App: isSidebar }">Granerateur.</h1>
+  <Sidebar v-if="isSidebar"></Sidebar>
+  <section id="container" v-bind:class="{ containerMenu: isSidebar }">
+    <Menu v-if="isMenu" @choice='choice'></Menu>
     <Ville v-if="app === 'ville'"></Ville>
+    <Pays v-if="app === 'pays'"></Pays>
   </section>
 </template>
 
@@ -10,19 +12,32 @@
 
 import Menu from './components/Menu.vue'
 import Ville from './components/Ville.vue'
+import Sidebar from './components/Sidebar.vue'
+import Pays from './components/Pays.vue'
 
 export default {
   name: 'App',
   components: {
     Menu,
     Ville,
+    Sidebar,
+    Pays,
   },
   data() {
       return {
         isMenu: true,
+        isSidebar: false,
         app: "",
       }
   },
+  methods: {
+    choice(payload) {
+      console.log(payload)
+      this.isMenu = false
+      this.isSidebar = true
+      this.app = payload
+    }
+  }
 }
 </script>
 
@@ -46,9 +61,17 @@ h1 {
   font-family: "Poppins";
 }
 
+.h1App {
+  margin-left: 7%;
+}
+
 #container {
   display: flex;
   justify-content: center;
   min-height: 80%;
+}
+
+.containerMenu {
+    margin-left: 7%;
 }
 </style>

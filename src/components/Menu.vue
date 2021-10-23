@@ -1,36 +1,36 @@
 <template>
     <section id="menu">
-        <div class="buttonApp">
+        <div class="buttonApp" v-on:click="choiceApp('pays')">
             <img src="../assets/drapeau.png" alt="Générateur de Pays">
             <div class="buttonAppBot">
                 <h2>Générateur de Pays</h2>
             </div>
         </div>
-        <div class="buttonApp">
+        <div class="buttonApp" v-on:click="choiceApp('nombre')">
             <img src="../assets/nombre-de-blocs-jouets.png" alt="Générateur de Nombre">
             <div class="buttonAppBot">
                 <h2>Générateur de Nombre</h2>
             </div>
         </div>
-        <div class="buttonApp">
+        <div class="buttonApp" v-on:click="choiceApp('prenom')">
             <img src="../assets/nom.png" alt="Générateur de Prénom">
             <div class="buttonAppBot">
                 <h2>Générateur de Prénom</h2>
             </div>
         </div>
-        <div class="buttonApp">
+        <div class="buttonApp" v-on:click="choiceApp('animaux')">
             <img src="../assets/chien.png" alt="Générateur d'animaux">
             <div class="buttonAppBot">
                 <h2>Générateur d'Animaux</h2>
             </div>
         </div>
-        <div class="buttonApp">
+        <div class="buttonApp" v-on:click="choiceApp('ville')">
             <img src="../assets/ville.png" alt="Générateur de ville">
             <div class="buttonAppBot">
                 <h2>Générateur de Ville</h2>
             </div>
         </div>
-        <div class="buttonApp">
+        <div class="buttonApp" v-on:click="choiceApp('fruit')">
             <img src="../assets/fruit.png" alt="Générateur de fruit et légumes">
             <div class="buttonAppBot">
                 <h2>Générateur de Pays</h2>
@@ -47,7 +47,12 @@ export default {
       return {
         
       }
-  },
+    },
+    methods: {
+        choiceApp(choice) {
+            this.$emit("choice", choice)
+        }
+    }
 }
 </script>
 
