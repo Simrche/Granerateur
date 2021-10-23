@@ -6,6 +6,7 @@
     <Ville v-if="app === 'ville'"></Ville>
     <Pays v-if="app === 'pays'"></Pays>
     <Prenom v-if="app === 'prenom'"></Prenom>
+    <Animaux v-if="app === 'animaux'"></Animaux>
   </section>
 </template>
 
@@ -16,6 +17,7 @@ import Ville from './components/Ville.vue'
 import Sidebar from './components/Sidebar.vue'
 import Pays from './components/Pays.vue'
 import Prenom from './components/Prenom.vue'
+import Animaux from './components/Animaux.vue'
 
 export default {
   name: 'App',
@@ -25,6 +27,7 @@ export default {
     Sidebar,
     Pays,
     Prenom,
+    Animaux,
   },
   data() {
       return {
