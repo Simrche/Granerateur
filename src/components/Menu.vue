@@ -33,7 +33,7 @@
         <div class="buttonApp" v-on:click="choiceApp('fruit')">
             <img src="../assets/fruit.png" alt="Générateur de fruit et légumes">
             <div class="buttonAppBot">
-                <h2>Générateur de Pays</h2>
+                <h2>Générateur de Fruit & Légumes</h2>
             </div>
         </div>
     </section>
