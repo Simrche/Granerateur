@@ -17,13 +17,13 @@ export default {
     data() {
       return {
         fruit: "Appuyez sur le bouton",
-        listFruit: ["Pomme.", "Banane.", "Poire.", "Pêche.", "Tomate.", "Pomme de terre.", "Carotte.", "Salade."]
+        listFruit: ["Pomme", "Banane", "Poire", "Pêche", "Tomate", "Pomme de terre", "Carotte", "Salade", "Aubergine", "Asperge", "Concombre", "Courgette", "Litchi", "Clémentine", "Mangue", "Fraise", "Poireau", "Poivron", "Brocoli", "Dattes", "Raisin", "Framboise", "Kiwi"]
       }
     },
     methods: {
         generateFruit() {
             let number = Math.floor(Math.random() * (this.listFruit.length)) + 0;
-            this.fruit = this.listFruit[number]
+            this.fruit = this.listFruit[number] + "."
         }
     }
 }

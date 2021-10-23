@@ -17,13 +17,13 @@ export default {
     data() {
       return {
         pays: "Appuyez sur le bouton",
-        listPays: ["France.", "Espagne.", "Angleterre.", "Allemagne.", "Argentine."]
+        listPays: ["France", "Espagne", "Angleterre", "Allemagne", "Argentine", "Irlande", "Chine", "Ecosse", "Portugal", "Autriche", "Algérie", "Maroc", "Suisse", "Croatie", "Italie", "Russie", "Japon", "Australie", "Canada", "Mexique", "Bresil", "Inde", "Afrique du Sud"]
       }
     },
     methods: {
         generatePays() {
             let number = Math.floor(Math.random() * (this.listPays.length)) + 0;
-            this.pays = this.listPays[number]
+            this.pays = this.listPays[number] + "."
         }
     }
 }

@@ -23,7 +23,7 @@ export default {
     },
     methods: {
         generateNombre() {
-            let number = Math.floor(Math.random() * (this.numberMax)) + 0;
+            let number = Math.floor(Math.random() * (this.numberMax)) + 1;
             this.nombre = number + "."
         }
     }

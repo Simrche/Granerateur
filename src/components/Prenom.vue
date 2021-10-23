@@ -17,13 +17,13 @@ export default {
     data() {
       return {
         prenom: "Appuyez sur le bouton",
-        listPrenom: ["Simon.", "Lili.", "Leo."]
+        listPrenom: ["Simon", "Lili", "Leo", "Arthur", "Margaux", "Cameron", "Alex", "Hugo", "Gabriel", "Rayan", "Owen", "Mael", "Thomas", "Louis", "Julia", "Eva", "Cecile", "Marie", "Astrid", "Matthieu", "Martin"]
       }
     },
     methods: {
         generatePrenom() {
             let number = Math.floor(Math.random() * (this.listPrenom.length)) + 0;
-            this.prenom = this.listPrenom[number]
+            this.prenom = this.listPrenom[number] + "."
         }
     }
 }

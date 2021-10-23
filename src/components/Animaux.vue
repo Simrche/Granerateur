@@ -17,13 +17,13 @@ export default {
     data() {
       return {
         animaux: "Appuyez sur le bouton",
-        listAnimaux: ["Lion.", "Chat.", "Chien."]
+        listAnimaux: ["Lion", "Chat", "Chien", "Panda", "Souris", "Renard", "Oiseau", "Baleine", "Poisson", "Autruche", "Guépard", "Zèbre", "Taureau", "Vache", "Cochon", "Mouton", "Otarie", "Loutre", "Loup", "Ours", "Cheval", "Tortue", "Aigle", "Bison", "Elephant", "Tigre", "Singe", "Renne", "Sanglier", "Orque", "Dauphin"]
       }
     },
     methods: {
         generateAnimaux() {
             let number = Math.floor(Math.random() * (this.listAnimaux.length)) + 0;
-            this.animaux = this.listAnimaux[number]
+            this.animaux = this.listAnimaux[number] + "."
         }
     }
 }
