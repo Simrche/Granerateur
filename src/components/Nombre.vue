@@ -39,7 +39,7 @@ export default {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        height: 100%;
+        height: 70vh;
     }
 
     #nombre h2 {

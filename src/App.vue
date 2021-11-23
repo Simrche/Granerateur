@@ -60,36 +60,51 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  min-height: 100%;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+    min-height: 100%;
+  }
 
-body {
-  background-color: #E6EED6;
-}
+  body {
+    background-color: #E6EED6;
+  }
 
-h1 {
-  font-size: 64px;
-  font-family: "Poppins";
-}
+  h1 {
+    font-size: 64px;
+    font-family: "Poppins";
+  }
 
-.h1App {
-  margin-left: 7%;
-}
-
-#container {
-  display: flex;
-  justify-content: center;
-  min-height: 80%;
-}
-
-.containerMenu {
+  .h1App {
     margin-left: 7%;
-}
+  }
+
+  #container {
+    display: flex;
+    justify-content: center;
+    min-height: 80%;
+  }
+
+  .containerMenu {
+      margin-left: 7%;
+  }
+
+  @media screen and (max-width: 1000px) {
+        #sidebar{
+            display: none;
+        }
+
+        .containerMenu {
+            margin-left: 0%;
+        }
+
+        .h1App {
+            margin-left: 0%;
+        }
+    }
+
 </style>

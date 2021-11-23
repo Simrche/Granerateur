@@ -54,4 +54,9 @@ export default {
         margin-bottom: 75px
     }
 
+    @media screen and (max-width: 1000px) {
+        #sidebar{
+            display: none;
+        }
+    }
 </style>
